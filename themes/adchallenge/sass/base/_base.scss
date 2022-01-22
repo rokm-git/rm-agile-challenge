@@ -1,0 +1,59 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  background-color: $color-black;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  @include font_roboto;
+}
+
+p {
+  font-size: 1rem;
+  text-transform: none;
+  color: $color-medium-gray;
+  font-weight: 300;
+  line-height: 1.9rem;
+}
+
+//GLOBAL MEDIA WIDTH
+
+$bp-all: 100em; //1600px
+$bp-xlarge: 100em; //1600px
+$bp-large: 75em; //1052px
+$bp-medium: 48em; //768px
+
+#block-adchallenge-content,
+#challenge-event,
+#block-about-me {
+  max-width: 65.75em;
+  margin: 0 auto;
+
+  @media only screen and (min-width: $bp-all) {
+    padding: 7.5rem 0;
+  }
+  @media only screen and (max-width: $bp-xlarge) {
+    padding: 7.5rem 0;
+  }
+  @media only screen and (max-width: $bp-large) {
+    padding: 6.5rem 1rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    padding: 6rem 1rem;
+  }
+}

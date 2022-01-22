@@ -1,0 +1,109 @@
+//NAVBAR
+
+header {
+  position: fixed;
+  background-color: $color-black-transparent;
+  z-index: 9;
+  left: 0;
+  right: 0;
+}
+.region-header {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  height: 99px;
+  align-items: center;
+  z-index: 9;
+  & .section-logo {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+
+    & .site-slogan {
+      margin-left: 1rem;
+      font-size: 1.5rem;
+      font-weight: 100;
+      color: $color-white;
+    }
+  }
+  .navbar {
+    opacity: 1;
+
+    & ul {
+      list-style-type: none;
+    }
+    & li {
+      display: inline-block;
+      margin-left: 42px;
+      @media screen and (max-width: 48em) {
+        padding: 1.5rem 0;
+      }
+    }
+    & a {
+      text-transform: uppercase;
+      position: relative;
+      text-decoration: none;
+      color: $color-white;
+      @media screen and (max-width: 48em) {
+        color: $color-white;
+        margin-left: 1rem;
+      }
+    }
+    & a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      border: 1px solid $color-blue;
+      top: 20px;
+      left: 0;
+      right: 0;
+    }
+    //BURGER
+    & .burger div {
+      width: 25px;
+      height: 2px;
+      background-color: $color-white;
+      margin: 5px;
+    }
+    & .burger {
+      display: none;
+      cursor: pointer;
+    }
+  }
+}
+// - - - - - - - - -
+// - - - - - - - - -
+@media screen and (max-width: 48em) {
+  .region-header {
+    overflow: hidden;
+    .navbar {
+      & .burger {
+        display: block;
+        cursor: pointer;
+      }
+      & .menu {
+        position: fixed;
+        right: 0;
+        //top: 0;
+        top: 99px;
+        height: 70vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        width: 70%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+      }
+      & li {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      & .nav-active {
+        transform: translateX(0%);
+      }
+    }
+  }
+}

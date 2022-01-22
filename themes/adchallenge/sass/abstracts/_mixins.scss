@@ -1,0 +1,83 @@
+//FONTS
+@mixin font_roboto {
+  font-family: "Roboto", sans-serif;
+  color: $color-white;
+}
+
+//ADDITIONAL FONTS STYLE
+@mixin title_hero_h1 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  @media screen and (max-width: 48em) {
+    font-size: 3rem;
+  }
+}
+
+@mixin sub_title_hero_h2 {
+  font-size: 1.5rem;
+  text-transform: none;
+  font-weight: 200;
+}
+
+@mixin title_h2 {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+@mixin sub_title {
+  font-size: 1.5rem;
+  text-transform: none;
+  font-weight: 500;
+  color: $color-white;
+}
+
+@mixin date_font {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #949494;
+}
+
+@mixin link_more {
+  font-size: 0.87rem;
+  text-transform: none;
+  font-weight: 500;
+}
+
+@mixin link_no_decoration {
+  text-decoration: none;
+  color: $color-white;
+}
+
+//BLUE LINE
+@mixin title_underline {
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 7rem;
+  left: 0;
+  bottom: 0;
+  background: $color-blue;
+}
+
+//BUTTONS
+@mixin button_red {
+  background-color: $color-red;
+  color: $color-white;
+  border: 1px solid $color-red;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3.18rem;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.5s;
+  //position: relative;
+  @media screen and (max-width: 48em) {
+    padding: 0.7rem 2rem;
+  }
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $color-white;
+  }
+}
